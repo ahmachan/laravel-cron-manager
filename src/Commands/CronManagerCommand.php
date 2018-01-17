@@ -105,7 +105,7 @@ class CronManagerCommand extends Command
      * Get action & param.
      * @return array
      */
-    protected function getAction(): array
+    protected function getAction()
     {
         $action = $this->argument('action');
 

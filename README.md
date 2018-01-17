@@ -4,6 +4,7 @@
 
 基于 [cron-manager](https://gitee.com/jianglibin/cron-manager) 的 Laravel 5 包
 
+
 ## 安装
 
 ```bash
@@ -28,7 +29,7 @@ Laravel 版本低于 5.5 则需要手动复制服务提供者以及别名到 `co
     'aliases' => [
         ...
         'Cron' => Mugen\LaravelCronManager\Facades\Cron::class,
-    】
+    ]
 ]
 ```
 
@@ -74,7 +75,7 @@ Cron::task('a', 's@1', function () {
 /**
  * 也可以使用 app('cron.manager') 配置任务 
  */
-app('cron.manager')->task('a', 's@1', function () {
+app('cron.manager')->task('b', 's@1', function () {
     echo "2\n";
 });
 
@@ -85,6 +86,7 @@ app('cron.manager')->task('a', 's@1', function () {
 ```bash
 php artisan cron:manager start
 ```
+
 
 ## 命令
 
@@ -108,7 +110,7 @@ php artisan cron:manager stop [--force|-f]
 php artisan cron:manager restart
 ```
 
-查看日志
+查看日志：
 ```bash
 php artisan cron:manager log
 ```

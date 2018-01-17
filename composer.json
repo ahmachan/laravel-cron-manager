@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.0",
         "godv/cron-manager": "^1.3",
         "illuminate/console": "^5.1",
         "illuminate/contracts": "^5.1",
